@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# 🎬 FilmiGyan 🍿  
+Your personal **movie search & watchlist app** powered by the **OMDb API**.  
+Search movies instantly, view detailed info, rate them with stars ⭐, and maintain your own watched list — all saved in your browser.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🔗 **Live Demo:** [FilmiGyan on Netlify](https://beamish-strudel-e6cd48.netlify.app/)  
+📂 **Repo:** [GitHub – FilmiGyan](https://github.com/madabonikoushik/FilmiGyan)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔍 **Movie Search** – Search from thousands of movies using OMDb API.  
+- 📖 **Movie Details** – View runtime, plot, cast, director, genre, and IMDb rating.  
+- ⭐ **Star Rating System** – Rate movies on a scale of 1–10.  
+- 📂 **Watched List** – Add movies you’ve watched and track your ratings.  
+- 🗑 **Delete Movies** – Remove watched movies easily.  
+- 💾 **Local Storage** – Keeps your watched list even after refreshing or closing the app.  
+- ⚡ **Fast & Responsive** – Works seamlessly on desktop and mobile.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Screenshots  
 
-### `npm test`
+### Home – Search & Results  
+![Home Screenshot](https://i.ibb.co/zZ5t9Hj/filmi-home.png)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Movie Details & Rating  
+![Details Screenshot](https://i.ibb.co/5vX1y6M/filmi-details.png)  
 
-### `npm run build`
+### Watched Movies Summary  
+![Watched Screenshot](https://i.ibb.co/gyTLfkh/filmi-watched.png)  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ⚛️ **React.js** – UI Components & State Management  
+- 🎨 **CSS** – Custom styling with neon logo effect  
+- 🌐 **OMDb API** – Movie search & details  
+- 📦 **LocalStorage** – Persistent data storage  
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Installation & Setup  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the repo and run locally:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Clone repo
+git clone https://github.com/madabonikoushik/FilmiGyan.git
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Move into folder
+cd FilmiGyan
 
-## Learn More
+# Install dependencies
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Run locally
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Build for production
+npm run build
