@@ -1,0 +1,393 @@
+:root {
+  --color-primary: #6c47ff;
+  --color-primary-light: #7e5fff;
+  --color-text: #f8f9fa;
+  --color-text-dark: #ced4da;
+  --color-background-100: #343a40;
+  --color-background-500: #2b3035;
+  --color-background-900: #1c1f26;
+  --color-red: #ff6b6b;
+  --color-red-dark: #fa5252;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text);
+  background-color: #F5F0CD;
+  padding: 2.4rem;
+}
+
+/* ============ NAVBAR ============ */
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 7.2rem;
+  padding: 0 3.2rem;
+  background: #3674B5;
+  border-radius: 0.9rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ============ MAIN ============ */
+.main {
+  margin-top: 2.4rem;
+  height: calc(100vh - 7.2rem - 3 * 2.4rem);
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+/* ============ BOXES ============ */
+.box {
+  width: 42rem;
+  max-width: 42rem;
+  background-color: #578FCA;
+  border-radius: 0.9rem;
+  overflow-x: hidden;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+ scrollbar-color: auto;
+}
+
+/* ============ LOADER & ERROR ============ */
+.loader,
+.error {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 4.8rem;
+}
+
+.error span {
+  color: var(--color-red);
+}
+
+/* ============ LOGO ============ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo span {
+  font-size: 3.2rem;
+}
+
+.logo h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: black;
+}
+*{
+  color: white;
+}
+/* ============ SEARCH ============ */
+.search {
+  justify-self: center;
+  border: none;
+  padding: 1.1rem 1.6rem;
+  font-size: 1.8rem;
+  border-radius: 0.7rem;
+  width: 40rem;
+  background-color: var(--color-background-100);
+  color: var(--color-text);
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+body
+.search:focus {
+  outline: none;
+  border: 1px solid var(--color-primary-light);
+  box-shadow: 0 0 10px var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.search::placeholder {
+  color: var(--color-text-dark);
+}
+
+/* ============ RESULTS ============ */
+.num-results {
+  justify-self: end;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ============ BUTTONS ============ */
+.btn-toggle {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  height: 2.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.2s;
+}
+
+.btn-toggle:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btn-delete {
+  position: absolute;
+  right: 2.4rem;
+  height: 1.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-red);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: var(--color-red-dark);
+  transform: scale(1.1);
+}
+
+/* ============ LISTS ============ */
+.list {
+  list-style: none;
+  padding: 0.8rem 0;
+}
+
+.list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 2.4rem;
+  font-size: 1.6rem;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+  border-bottom: 1px solid var(--color-background-100);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.list.list-movies li {
+  cursor: pointer;
+}
+
+.list.list-movies li:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: scale(1.01);
+}
+
+.list img {
+  width: 100%;
+  grid-row: 1 / -1;
+  border-radius: 0.4rem;
+}
+
+.list h3 {
+  font-size: 1.8rem;
+}
+
+.list div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.list p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ============ SUMMARY ============ */
+.summary {
+  padding: 2.2rem 3.2rem 1.8rem 3.2rem;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.summary h2 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.summary div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.summary p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ============ DETAILS ============ */
+.details {
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+
+.details header {
+  display: flex;
+}
+
+.details section {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.details img {
+  width: 33%;
+  border-radius: 0.8rem;
+}
+
+.details-overview {
+  width: 100%;
+  padding: 2.4rem 3rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.details-overview h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.details-overview p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ============ RATING ============ */
+.rating {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 0.9rem;
+  padding: 2rem 2.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0.05);
+}
+
+/* ============ ADD BUTTON ============ */
+.btn-add {
+  background: linear-gradient(to right, var(--color-primary), #9a4efc);
+  color: white;
+  border: none;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-add:hover {
+  background: linear-gradient(to right, #a970f2, var(--color-primary));
+  transform: scale(1.05);
+}
+
+/* ============ BACK BUTTON ============ */
+.btn-back {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  height: 3.2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  font-family: sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #f1f3f5;
+}
+.neon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #f0f,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 60px #0ff;
+  animation: flicker 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.neon-logo:hover {
+  transform: scale(1.05);
+  text-shadow:
+    0 0 10px #f0f,
+    0 0 20px #0ff,
+    0 0 30px #0ff,
+    0 0 50px #f0f,
+    0 0 80px #0ff;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #f0f,
+      0 0 20px #0ff,
+      0 0 40px #0ff;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
